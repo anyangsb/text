@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>。。。</title>
+</head>
+<style type="text/css">
+	 #a{
+	 	font-size: 60px;
+	 	height:80px;
+	 	float: left;
+	 }
+	 .b{
+	 	color: red;
+	 	font-size: 30px;
+	 	float: right;
+	 	margin:10px; 
+	 }
+	 #ab{
+	 	height: 80px;
+	 	background:url(5.jpg);
+	 }
+	 img{
+	 	height:100%;
+	 	width:100%;
+	 	
+	 }
+	 #c{
+	 	background-color: red;
+	 }
+	 	
+	 #d{
+	 	background-color: yellow;
+	 	
+	 }
+	 #e{
+	 	background-color: green;
+	 
+	 }
+	 #f{
+	 	height: 300px;
+	 	font-size: 50px;
+	 	color: pink;
+	 }
+	 #g{
+	 	height: 30px;
+	 	background: white;
+	 	position: fixed;
+	 	right: 0;
+        bottom: 0;
+        float: right;
+	 }
+	 .box{
+			height: 300px;
+			width: 100%;
+			float: left;
+		}
+		@media only screen and (min-width: 700px) {
+			.box{
+				width: 33.3%;
+			}
+		}
+</style>
+<body>
+<div id="ab">
+   <div id="a">Simon</div>
+   <div class="b">主页</div>
+   <div class="b">团队</div>
+   <div class="b">登入</div>
+</div>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544000102354&di=5322a6345550cb4c527a6481a0f45f7e&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201504%2F17%2F20150417H4757_crvZw.png">
+<div class="box"id="c"></div>
+<div class="box"id="d"></div>
+<div class="box"id="e"></div>
+</div>
+<button id="g" onclick="Topfun()">置顶</button>
+<div id="f">"Individual commitment to a group effort - that is what makes a team work, a company work, a society work, a civilization work."
+- Vince Lombardi</div>
+<script type="text/javascript">
+	var four;
+function Topfun(){
+four=setInterval(FourscrollBy,10);
+}
+function FourscrollBy(eachHeight){
+if(document.documentElement && document.documentElement.scrollTop) //IE
+{
+if(document.documentElement.scrollTop<=0){
+clearInterval(four);
+}else{
+window.scrollBy(0,-30);
+}
+}else{ //Chrome不支持documentElement.scrollTop
+if(document.body.scrollTop<=0){
+clearInterval(four);
+}else{
+window.scrollBy(0,-30);
+}
+}
+}
+</script>
+</body>
+</html>

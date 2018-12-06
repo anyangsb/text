@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>反复横跳</title>
+  <style type="text/css">
+    
+      #box{
+        background: red;
+        position: absolute; 
+        top:0;
+        left: 0;
+        font-size: 50px;
+      }
+    
+  </style>
+</head>
+<body>
+<div id="box">反复横跳</div>
+<script type="text/javascript">
+  var $box=document.getElementById("box");
+  var move =false;
+  $box.addEventListener("click",function () {
+    move=!move;
+  });
+  var left = 0;
+  var step =10;
+  var dir = 1;
+  setInterval(function(){
+    if(move){
+      if(dir==1)
+        {left+=step;}
+      else{left-=step;}
+      if(left>=400){dir=0;}
+      if(left<0)
+        {dir=1;}
+      $box.style.left =left +"px";
+    }
+   },1);
+  var dir
+</script>
+</body>
+</html>
