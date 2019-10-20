@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<title>Faker：传奇</title>
+</head>
+<style>
+	.b1{
+	height: 10%;
+    background-color: yellow;
+}
+#b{
+	height: 10%;
+	position: absolute; 
+	left: 0;
+    background-color: yellow;
+    text-align:center;
+    font-size: 30px;
+    color: blue;
+}
+.a{ 
+	margin-top: 20px;
+	margin-right: 10%;
+	margin-left: 10%;
+	background:url(蓝天.jpg);
+	height: 100%;
+	}
+#js{
+	font-size: 30px;
+	color: red;
+}
+#p1{
+	background:url(Faker1.png);
+	float: right;
+	height: 100%;
+	width: 20%;
+}
+#name{
+   font-size: 50px;
+}
+</style>
+<body>
+<div class="b1">
+<div id="b">来了解一下Faker吧！← 点一下</div>
+<embed src="tt.mp3" hidden="true" loop="true" />
+</div>
+<div class="a">
+<div id="p1"></div>
+<div id="name">李相赫:</div>
+<div id="js">   李相赫，ID：faker，绰号“大魔王”，司职《英雄联盟》中单，1996年5月7日出生于韩国，是韩国电子竞技俱乐部SKT英雄联盟分部的队员之一 [1]  。
+2013年2月Faker被招入SK Telecom #2队，该队伍于2013年6月更名为SK Telecom T1 K队，2015年SK Telecom T1 K与SK Telecom T1 S队伍合并为SKT T1。 [2] 
+Faker以顶级的游戏操作和取得赛事冠军的数目而闻名。Faker带领SKT取得三届英雄联盟全球总决赛冠军，两届英雄联盟季中冠军赛冠军，八次韩国国内顶级联赛冠军 [3]  ，率领SKT建立起自己的王朝。是英雄联盟中荣誉最多的职业选手。 [4] 
+2019年，获得LCK春季赛冠军 [5]  。2019年7月7日，LCK以3-1战胜LPL，李相赫获得2019年亚洲对抗赛冠军 [6]  。2019年8月31日，SKT战队以3-1战胜GRF战队，夺得2019年《英雄联盟》LCK夏季赛冠军。</div>
+</div>
+<script type="text/javascript">
+	var $b=document.getElementById("b");
+	var move =false;
+  $b.addEventListener("click",function () {
+    move=!move;
+  });
+  var left = 0;
+  var step =1;
+  var dir = 1;
+  setInterval(function(){
+    if(move){
+      if(dir==1)
+        {left+=step;}
+      else{left-=step;}
+      if(left>=900){dir=0;}
+      if(left<400)
+        {dir=1;}
+      $b.style.left =left +"px";
+    }
+   },1);
+  var dir
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>李瓜皮</title>
+  <style type="text/css">
+    
+      .box{
+        background:url(faker3.jpg);
+        width: 1000px;
+        height: 1000px;
+        left: : 0;
+        top: 0;
+        position: absolute;
+      }
+      .box1{
+        background:url(faker2.jpg);
+        width: 1000px;
+        height: 1000px;
+        left: : 0;
+        top: 0;
+        position: absolute;
+      }
+      .box2{
+        background:url(faker4.jpg);
+        width: 1000px;
+        height: 1000px;
+        left: : 0;
+        top: 0;
+        position: absolute;
+      }
+  </style>
+</head>
+<body>
+	<embed src="tt.mp3" hidden="true" loop="true" />
+<script type="text/javascript">
+var dir=1;
+setInterval(function(){
+  var box =document.createElement("div");
+  
+  if(dir==1)
+   {box.className="box2";
+     dir=2;}
+  else if(dir==2)
+  	{box.className="box1";
+     dir=3;}
+  else if(dir==3)
+  	{box.className="box";
+     dir=1;}
+  document.body.appendChild(box);
+  box.style.left=Math.random()*1000+"px";
+  box.style.top=Math.random()*600+"px";
+  console.log(Math.random()*1000);
+   console.log(Math.random()*600);
+}
+  ,500);
+ var dir;
+</script>
+</body>
+</html>
